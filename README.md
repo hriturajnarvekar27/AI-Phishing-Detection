@@ -9,7 +9,7 @@ A **production-ready**, **full-stack** phishing detection platform that combines
 
 | Dashboard Overview | URL Detection | Email Detection | Scan History |
 |---------------------|---------------|------------------|-------------|
-| ![Dashboard](AI Phishing Detector/Photos/dashboard-overview.png) | ![URL](AI Phishing Detector/Photos/url-detection.png) | ![Email](AI Phishing Detector/Photos/email-detection.png) | ![History](AI Phishing Detector/Photos/scan-history.png) |
+| ![Dashboard](./AI Phishing Detector/Photos/dashboard-overview.png) | ![URL](AI Phishing Detector/Photos/url-detection.png) | ![Email](AI Phishing Detector/Photos/email-detection.png) | ![History](AI Phishing Detector/Photos/scan-history.png) |
 
 ---
 
