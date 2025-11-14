@@ -5,11 +5,6 @@ A **production-ready**, **full-stack** phishing detection platform that combines
 
 ---
 
-## 🚀 Live Demo (Coming Soon)
-> Backend: [Render/Railway] | Frontend: [Vercel]
-
----
-
 ## 📸 Screenshots
 
 | Dashboard Overview | URL Detection | Email Detection | Scan History |
