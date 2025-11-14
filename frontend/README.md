@@ -1,8 +1,6 @@
 
   # AI Phishing Detection App
 
-  This is a code bundle for AI Phishing Detection App. The original project is available at https://www.figma.com/design/4b7BBUMqJornbg7KJMuEgT/AI-Phishing-Detection-App.
-
   ## Running the code
 
   Run `npm i` to install the dependencies.
