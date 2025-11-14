@@ -1,4 +1,4 @@
-# 🛡️ AI Phishing Detection System  
+# AI Phishing Detection System  
 **Real-time Email & URL Threat Detection with Deep Learning + Modern Dashboard**
 
 A **production-ready**, **full-stack** phishing detection platform that combines **hybrid ML/DL pipelines** with a **sleek, Figma-inspired dark UI**. Detects phishing in **emails** and **URLs** in real time with **confidence scoring**, **explainable reasoning**, and **scan history**.
@@ -38,7 +38,7 @@ A **production-ready**, **full-stack** phishing detection platform that combines
 - Real-time result panel
 - Scan history with filtering & export
 
-### 📊 **Analytics Overview**
+### **Analytics Overview**
 | Metric | Description |
 |-------|-------------|
 | Total Scans | All processed items |
