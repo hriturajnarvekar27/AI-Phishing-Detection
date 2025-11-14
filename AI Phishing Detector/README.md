@@ -1,108 +1,78 @@
-🛡️ AI Phishing Detection System
-Real-time Email & URL Threat Detection using Deep Learning + Modern UI Dashboard
+# 🛡️ AI Phishing Detection System  
+**Real-time Email & URL Threat Detection with Deep Learning + Modern Dashboard**
 
-The AI Phishing Detection System is a full-stack application that detects phishing threats in emails and URLs.
-It uses a hybrid ML+DL pipeline combining:
+A **production-ready**, **full-stack** phishing detection platform that combines **hybrid ML/DL pipelines** with a **sleek, Figma-inspired dark UI**. Detects phishing in **emails** and **URLs** in real time with **confidence scoring**, **explainable reasoning**, and **scan history**.
 
-Convolutional Neural Networks (CNN)
+---
 
-TF-IDF Features
+## 🚀 Live Demo (Coming Soon)
+> Backend: [Render/Railway] | Frontend: [Vercel]
 
-Canopy-selected features
+---
 
-K-Nearest Neighbors (KNN)
+## 📸 Screenshots
 
-URL heuristic feature extraction
+| Dashboard Overview | URL Detection | Email Detection | Scan History |
+|---------------------|---------------|------------------|-------------|
+| ![Dashboard](./Photos/dashboard-overview.png) | ![URL](./Photos/url-detection.png) | ![Email](./Photos/email-detection.png) | ![History](./Photos/scan-history.png) |
 
-Ensemble weighted scoring
+---
 
-The system provides real-time results through a Figma-inspired dark UI dashboard built using React, TypeScript, Tailwind, and Vite.
+## ✨ Key Features
 
-📸 Screenshots
-🔹 Dashboard Overview
+### 🔍 **AI-Powered Threat Detection**
+- **URL Phishing Detection**
+  - Heuristic features: length, digits, HTTPS, subdomains, IP presence, suspicious keywords
+  - Pipeline: `Scaler → CNN → KNN → Weighted Ensemble`
+- **Email Phishing Detection**
+  - Text preprocessing + TF-IDF vectorization
+  - Canopy-selected high-impact features
+  - Pipeline: `TF-IDF → CNN → KNN → Ensemble Score`
+- **Explainable AI**
+  - Confidence score: `0–100%`
+  - Detailed model breakdown (CNN vs KNN)
+  - Suspicious pattern highlighting
+- **Real-time Results**
+  - Instant feedback with **red/green badges**
+  - Auto-updating scan history with timestamps
 
-🔹 URL Phishing Detection
+### 🖥️ **Modern Dashboard (Figma-Inspired)**
+- **Dark theme** with professional spacing & typography
+- Built with **React + TypeScript + TailwindCSS + ShadCN**
+- Responsive & smooth animations
+- Real-time result panel
+- Scan history with filtering & export
 
-🔹 URL Scan History
+### 📊 **Analytics Overview**
+| Metric | Description |
+|-------|-------------|
+| Total Scans | All processed items |
+| Threats Detected | Phishing confidence > 60% |
+| Safe Items | Confidence < 40% |
+| Avg. Confidence | Across all scans |
 
-🔹 Email Phishing Detection
+---
 
-✨ Features
-🔍 AI-powered Detection
+## 🧠 Tech Stack
 
-URL phishing detection using:
+| Layer | Technologies |
+|------|--------------|
+| **Backend** | Python, Flask, Flask-CORS, TensorFlow, Scikit-Learn, Joblib, NumPy, Pandas |
+| **Frontend** | React (TypeScript), Vite, TailwindCSS, ShadCN UI, Lucide Icons |
+| **ML Models** | CNN (`*.h5`), KNN (`*.pkl` / `*.joblib`), TF-IDF, Scaler, Ensemble Weights |
+| **Design** | Figma-inspired UI, Dark Mode, Responsive Grid |
 
-Feature extraction (length, digits, HTTPS, subdomains, IP, suspicious keywords)
+---
 
-Scaler → CNN → KNN → Ensemble score
+## 📁 Project Structure
 
-Email phishing detection using:
-
-Clean text → TF-IDF → Selected features → CNN → KNN ensemble
-
-Detailed reasoning & suspicious pattern extraction
-
-Confidence scoring (0–100%)
-
-🖥️ Modern Dashboard UI
-
-Dark theme (Figma-style)
-
-Real-time result panel
-
-Auto-updating scan history with timestamps
-
-Highlighted phishing and safe badges (red/green)
-
-Smooth layout with professional spacing
-
-📊 Stats Overview
-
-Total scans
-
-Threats detected
-
-Safe items
-
-Average confidence
-
-🧠 Tech Stack
-Backend
-
-Python
-
-Flask
-
-Flask-CORS
-
-TensorFlow
-
-Scikit-Learn
-
-Joblib
-
-NumPy / Pandas
-
-Frontend
-
-React (TypeScript)
-
-Vite
-
-TailwindCSS
-
-ShadCN Components
-
-Custom Figma-based design
-
-📁 Project Structure
-AI Phishing Detector/
+```bash
+AI-Phishing-Detector/
 │
-├── Photos/                                   # README screenshots
-│
+├── Photos/                          # Screenshots for README
 ├── backend/
-│   ├── Dataset/                               # Optional dataset
-│   ├── models/                                # All ML models
+│   ├── Dataset/                     # (Optional) Training data
+│   ├── models/                      # Pre-trained models
 │   │   ├── cnn_model_final.h5
 │   │   ├── cnn_feature_extractor.h5
 │   │   ├── knn_classifier.pkl
@@ -111,115 +81,25 @@ AI Phishing Detector/
 │   │   ├── canopy_selected_features.npy
 │   │   ├── scaler.joblib
 │   │   └── ensemble_meta.json
-│   ├── app.py                                 # Flask server
-│   └── requirements.txt                       # Backend deps
+│   ├── app.py                       # Flask API server
+│   └── requirements.txt
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── guidelines/
-│   │   ├── styles/
-│   │   ├── App.tsx                            # Main UI
-│   │   ├── index.css
+│   │   ├── components/              # Reusable UI
+│   │   ├── pages/                   # Dashboard, URL, Email views
+│   │   ├── hooks/                   # Custom React hooks
+│   │   ├── lib/                     # API utils, types
+│   │   ├── styles/                  # Tailwind config, globals
+│   │   ├── App.tsx
 │   │   ├── main.tsx
 │   │   └── Attributions.md
+│   ├── public/
 │   ├── index.html
 │   ├── vite.config.ts
+│   ├── tailwind.config.ts
 │   ├── package.json
-│   └── package-lock.json
+│   └── README.md
 │
 ├── .gitignore
 └── README.md
-
-⚙️ Installation & Setup
-🔧 Backend Setup (Flask API)
-1. Install dependencies
-cd backend
-pip install -r requirements.txt
-
-2. Run the backend
-python app.py
-
-
-Backend will run on:
-
-http://127.0.0.1:5000
-
-💻 Frontend Setup (React + Vite + Tailwind)
-1. Install dependencies
-cd frontend
-npm install
-
-2. Run the frontend
-npm run dev
-
-
-Frontend will start at:
-
-http://localhost:5173
-
-🔗 API Endpoint
-POST /predict
-📌 URL Example
-{
-  "url": "http://free-gift-card.tinyurl.com/winner"
-}
-
-📌 Email Example
-{
-  "email": "Verify your account at http://secure-bank.tk"
-}
-
-Sample Response
-{
-  "type": "url",
-  "label": "phishing",
-  "confidence": "80.25%",
-  "details": {
-    "cnn": 0.72,
-    "knn": 0.67
-  },
-  "reason": "Suspicious URL keyword detected: tinyurl",
-  "timestamp": "2025-11-14 23:00:01"
-}
-
-🧪 Testing Examples
-✔️ URLs
-http://free-gift-card.tinyurl.com/winner
-https://www.wikipedia.org/wiki/OpenAI
-http://192.168.0.10/login
-
-✔️ Emails
-Subject: Update your password now  
-We detected unusual login attempts on your account.
-
-🚀 Future Enhancements
-
-Deploy backend to Render/Railway
-
-Deploy frontend to Vercel
-
-Add database logging (MongoDB/Firebase)
-
-Add analytics charts to the dashboard
-
-Add user login & role system
-
-Multi-language phishing detection
-
-⭐ Acknowledgements
-
-TensorFlow
-
-Scikit-Learn
-
-React + Tailwind
-
-Figma Design Inspiration
-
-ShadCN Components
-
-👨‍💻 Author
-
-Ruturaj Narvekar
-AI/ML Developer • Full-Stack Engineer
