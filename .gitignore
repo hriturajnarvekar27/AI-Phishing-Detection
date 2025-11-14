@@ -1,0 +1,85 @@
+# ===================================
+# 📁 GENERAL PROJECT IGNORE RULES
+# ===================================
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and cache
+*.log
+*.out
+*.err
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.swp
+
+# ===================================
+# 🧠 PYTHON / FLASK BACKEND
+# ===================================
+venv/
+env/
+*.egg-info/
+*.egg
+*.bak
+*.cache/
+instance/
+.pytest_cache/
+.mypy_cache/
+.env
+.env.*
+*.sqlite3
+*.db
+*.h5
+*.hdf5
+*.joblib
+*.pkl
+*.npy
+*.npz
+*.csv
+
+# Model checkpoints (keep only final versions if necessary)
+backend/models/cnn_checkpoint.h5
+backend/models/temporary/
+backend/models/*.ckpt
+backend/models/*.pb
+backend/models/__pycache__/
+
+# ===================================
+# 💻 FRONTEND (React + Vite + Tailwind)
+# ===================================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.DS_Store
+
+# Vite & cache
+frontend/.vite/deps
+frontend/.vite-cache
+frontend/.parcel-cache
+
+# IDE & Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local testing builds
+frontend/build/
+frontend/out/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+
+# ===================================
+# 📦 DEPLOYMENT / MISC
+# ===================================
+*.zip
+*.tar
+*.gz
+*.7z
+*.bak
+*.old
